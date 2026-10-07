@@ -1,0 +1,47 @@
+﻿@model List<Cursa>
+
+<h1>@ViewBag.Titlu</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Destinație</th>
+            <th>Tip</th>
+            <th>Preț</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Detalii" asp-route-id="@item.Id">@item.Destinatie</a>
+                </td>
+                <td>@item.Tip</td>
+                <td>@item.Pret lei</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Rezumat {
+    <p>Înregistrări: @Model.Count</p>
+
+    @{
+        decimal minim = decimal.MaxValue;
+        if (Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                if (item.Pret < minim)
+                {
+                    minim = item.Pret;
+                }
+            }
+        }
+        else
+        {
+            minim = 0;
+        }
+    }
+    <p>Cel mai ieftin bilet: @minim lei</p>
+}

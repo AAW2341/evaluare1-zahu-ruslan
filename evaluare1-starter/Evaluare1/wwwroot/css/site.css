@@ -1,0 +1,82 @@
+:root {
+    --bleumarin: #1F3864;
+    --chihlimbar: #C77700;
+    --fond: #F5F7FB;
+    --linie: #D5DCE8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fond);
+    color: #1d2533;
+}
+
+header {
+    background: var(--bleumarin);
+    padding: 12px 24px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+header nav a:hover { color: #FFD08A; }
+
+.pagina {
+    display: flex;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+    align-items: flex-start;
+}
+
+main { flex: 1; }
+
+h1 { color: var(--bleumarin); margin-top: 0; }
+
+.rezumat { width: 260px; }
+
+.rezumat p {
+    background: #fff;
+    border-left: 4px solid var(--chihlimbar);
+    padding: 8px 12px;
+    margin: 0 0 8px 0;
+}
+
+table {
+    border-collapse: collapse;
+    background: #fff;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--linie);
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th { background: #E8EDF6; color: var(--bleumarin); }
+
+a { color: var(--bleumarin); }
+
+.mesaj {
+    background: #FFF4E0;
+    border-left: 4px solid var(--chihlimbar);
+    padding: 8px 12px;
+}
+
+footer {
+    text-align: center;
+    color: #6b7588;
+    font-size: 13px;
+    padding: 24px;
+}
+
+code { background: #E8EDF6; padding: 1px 5px; border-radius: 3px; }

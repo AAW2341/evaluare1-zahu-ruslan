@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Titlu · Evaluarea 1</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Acasă</a>
+            @* Sarcina 4: aici adaugi linkul către lista ta *@
+        </nav>
+    </header>
+
+    <div class="pagina">
+        <main>
+            @RenderBody()
+        </main>
+        <aside class="rezumat">
+            @* Sarcina 4: aici afișezi secțiunea Rezumat *@
+        </aside>
+    </div>
+
+    <footer>Elaborarea aplicațiilor ASP.NET · Lecția de evaluare nr. 1</footer>
+</body>
+</html>

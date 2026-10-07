@@ -1,0 +1,23 @@
+﻿@model List<Cursa>
+
+<h1>@ViewBag.Titlu</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Destinație</th>
+            <th>Tip</th>
+            <th>Preț</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Destinatie</td>
+                <td>@item.Tip</td>
+                <td>@item.Pret lei</td>
+            </tr>
+        }
+    </tbody>
+</table>

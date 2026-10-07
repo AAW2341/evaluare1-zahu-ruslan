@@ -14,7 +14,9 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Destinatie</td>
+                <td>
+                    <a asp-action="Detalii" asp-route-id="@item.Id">@item.Destinatie</a>
+                </td>
                 <td>@item.Tip</td>
                 <td>@item.Pret lei</td>
             </tr>

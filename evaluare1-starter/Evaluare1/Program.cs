@@ -18,11 +18,13 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
-// Sarcina 3: ruta ta se scrie AICI, înaintea rutei implicite de mai jos.
+app.MapControllerRoute(
+    name: "FiltrareCurse",
+    pattern: "curse/tip/{tip}",
+    defaults: new { controller = "Curse", action = "Tip" });
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

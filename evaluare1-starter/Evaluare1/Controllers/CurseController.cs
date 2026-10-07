@@ -32,5 +32,21 @@ namespace Evaluare1.Controllers
 
             return View(cursaGasita);
         }
+
+        public IActionResult Tip(string tip)
+        {
+            var listaFiltrata = new List<Cursa>();
+
+            foreach (var cursa in BazaCurse.Lista)
+            {
+                if (cursa.Tip.ToLower() == tip.ToLower())
+                {
+                    listaFiltrata.Add(cursa);
+                }
+            }
+
+            ViewBag.Titlu = "Curse de autobuz: " + tip;
+            return View("Index", listaFiltrata);
+        }
     }
 }

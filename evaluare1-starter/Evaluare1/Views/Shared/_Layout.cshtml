@@ -10,7 +10,7 @@
     <header>
         <nav>
             <a asp-controller="Home" asp-action="Index">Acasă</a>
-            @* Sarcina 4: aici adaugi linkul către lista ta *@
+            <a asp-controller="Curse" asp-action="Index">Curse de autobuz</a>
         </nav>
     </header>
 
@@ -19,7 +19,7 @@
             @RenderBody()
         </main>
         <aside class="rezumat">
-            @* Sarcina 4: aici afișezi secțiunea Rezumat *@
+            @RenderSection("Rezumat", required: false)
         </aside>
     </div>
 
